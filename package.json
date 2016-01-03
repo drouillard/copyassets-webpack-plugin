@@ -1,0 +1,25 @@
+{
+  "name": "copyassets-webpack-plugin",
+  "version": "0.0.1",
+  "description": "Webpack plugin for copying compiled assets to additional directories",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "webpack",
+    "plugin",
+    "copy",
+    "bundle",
+    "assets"
+  ],
+  "author": "Douglas Drouillard",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/drouillard/copyassets-webpack-plugin.git"
+  },
+  "devDependencies": {
+    "eslint": "^1.10.3"
+  }
+}
