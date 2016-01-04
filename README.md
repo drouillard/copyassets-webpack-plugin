@@ -16,15 +16,15 @@ var yetAnotherOutputPath = path.join(__dirname, 'diffent-subfolder');
 
 module.exports = {
   entry: {
-    'index': fixtureFile('index.js')
+    'index': 'index.js'
   },
   output: {
-    path: OUTPUT_DIR,
+    path: outputPath,
     filename: '[name].bundle.js'
   },
   plugins: [
     new webpack.NoErrorsPlugin(),
-    new CopyAssetsPlugin([ ADDITIONAL_OUTPUT_DIR ])
+    new CopyAssetsPlugin([ additionalOutputPath, yetAnotherOutputPath ])
   ],
   stats: {
     colors: true
