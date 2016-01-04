@@ -8,7 +8,7 @@ Webpack plugin that copies over compiled assets to additional folders. Useful in
 ``` javascript
 var path = require('path');
 var webpack = require('webpack');
-var CopyAssetsPlugin = require('copyassets-webpack-plugin-bundle');
+var CopyAssetsPlugin = require('copyassets-webpack-plugin');
 
 var outputPath = __dirname;
 var additionalOutputPath = path.join(__dirname, 'subfolder');
