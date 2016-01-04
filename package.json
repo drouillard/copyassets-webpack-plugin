@@ -1,6 +1,6 @@
 {
   "name": "copyassets-webpack-plugin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Webpack plugin for copying compiled assets to additional directories",
   "main": "lib/index.js",
   "scripts": {
