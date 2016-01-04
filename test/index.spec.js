@@ -30,12 +30,6 @@ describe('Copy Asset Plugin', function () {
 
   describe('Copying files', function () {
 
-    // before(function (done) {
-    //   mkdirp.sync(OUTPUT_DIR);
-    //   mkdirp.sync(ADDITIONAL_OUTPUT_DIR);
-    //   done();
-    // })
-
     beforeEach(function (done) {
       rm_rf(TEMP_DIR, function () {
         mkdirp.sync(OUTPUT_DIR);
@@ -69,10 +63,14 @@ describe('Copy Asset Plugin', function () {
         expect(stats.hasErrors()).toBe(false);
 
         // test original output exists
-        expect(fs.accessSync(path.join(OUTPUT_DIR, bundledFilename), fs.F_OK)).toNotThrow;
+        expect(function () {
+          return fs.accessSync(path.join(OUTPUT_DIR, bundledFilename), fs.F_OK)
+        }).toNotThrow(/no such file/);
 
         // test copies are made
-        expect(fs.accessSync(path.join(ADDITIONAL_OUTPUT_DIR, bundledFilename), fs.F_OK)).toNotThrow;
+        expect(function () {
+          return fs.accessSync(path.join(ADDITIONAL_OUTPUT_DIR, bundledFilename), fs.F_OK)
+        }).toNotThrow(/no such file/);
 
         done();
       });
